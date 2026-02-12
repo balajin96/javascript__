@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Password Generator</title>
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full    max-w-md">
+        <h2 class="text-xl font-bold mb-4">Password Generator</h2>
+        <div class="flex items-center mb-4">
+            <input type="text" class=" border border-gray-300 rounded px-3 py-2 w-full hover:cursor-not-allowed"
+                placeholder="Generated Password" readonly />
+        </div>
+        <p class="text-sm">select password length: </p>
+        <input type="range" id="getRange" class=" border border-gray-300 rounded py-2 w-full" min="1" max="100"
+            value="20" />
+        <div class="flex items-center justify-between">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 jsbtn">Generate Password</button>
+            <!-- <i data-lucide="copy" class="text-blue-500 w-15 h-15 hover:cursor-pointer copyPswd"></i> -->
+            <button class="bg-lime-500 text-white px-4 py-2 rounded hover:bg-green-600 copyPswd">Copy Password</button>
+        </div>
+
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="index.js" defer></script>
+</body>
+
+</html>
