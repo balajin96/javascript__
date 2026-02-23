@@ -39,6 +39,7 @@ function createPassword() {
     }
     inputEl.value = password;
     console.log(password);
+    copyEl.classList.remove("hidden");
 
 }
 
