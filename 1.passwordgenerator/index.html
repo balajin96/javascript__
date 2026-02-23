@@ -16,9 +16,14 @@
             <input type="text" class=" border border-gray-300 rounded px-3 py-2 w-full hover:cursor-not-allowed"
                 placeholder="Generated Password" readonly />
         </div>
-        <p class="text-sm">select password length: </p>
+        <div class="flex items-center">
+            <p class="text-sm">select password length: </p>
+            <span class="ml-2" id="rangeVal">0</span>
+        </div>
+
         <input type="range" id="getRange" class=" border border-gray-300 rounded py-2 w-full" min="1" max="100"
-            value="20" />
+            value="0" />
+
         <div class="flex items-center justify-between">
             <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 jsbtn">Generate Password</button>
             <!-- <i data-lucide="copy" class="text-blue-500 w-15 h-15 hover:cursor-pointer copyPswd"></i> -->
