@@ -1,19 +1,19 @@
 const btnEl = document.querySelector(".jsbtn");
 const inputEl = document.querySelector("input");
 const copyEl = document.querySelector(".copyPswd");
+const rangeEl = document.getElementById("getRange");
+const rangeValueEl = document.getElementById("rangeVal");
 /**
  * CSS selector for range input
  *  const rangeEl = document.querySelector("input[type='range']");
+ * console.log(rangeEl.value);
+ * console.log(inputEl.__proto__);
+ * console.log(inputEl.__proto__.__proto__);
+ * console.log(inputEl.__proto__.__proto__.__proto__);
+ * console.log(inputEl.__proto__.__proto__.__proto__.__proto__);
+ * console.log(inputEl.__proto__.__proto__.__proto__.__proto__.__proto__);
  */
-const rangeEl = document.getElementById("getRange");
-const rangeValueEl = document.getElementById("rangeVal");
 
-// console.log(rangeEl.value);
-// console.log(inputEl.__proto__);
-// console.log(inputEl.__proto__.__proto__);
-// console.log(inputEl.__proto__.__proto__.__proto__);
-// console.log(inputEl.__proto__.__proto__.__proto__.__proto__);
-// console.log(inputEl.__proto__.__proto__.__proto__.__proto__.__proto__);
 
 rangeEl.addEventListener("input", () => { getRangeValue() });
 
@@ -46,4 +46,11 @@ function createPassword() {
 function copyPassword() {
     inputEl.select()
     navigator.clipboard.writeText(inputEl.value)
+    copyEl.textContent = "Text Copied!";
+    copyEl.classList.toggle("bg-purple-500", "bg-lime-600")
+    setTimeout(() => {
+        copyEl.textContent = "Copy Password";
+        copyEl.classList.toggle("bg-lime-600", "bg-purple-500")
+    }, 3000)
+
 }
